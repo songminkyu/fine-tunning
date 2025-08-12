@@ -6,7 +6,7 @@ A modular package for fine-tuning GPT-OSS models on Korean educational datasets.
 """
 
 __version__ = "1.0.0"
-__author__ = "Fine-tuner Project"
+__author__ = "Fine-Tunning Project"
 
 from .config import ModelConfig
 from .model import ModelLoader, ModelInference

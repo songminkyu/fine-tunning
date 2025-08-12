@@ -7,7 +7,7 @@ Main Execution Script
 """
 
 import logging
-from fine_tuner import (
+from core import (
     ModelConfig, ModelLoader, ModelInference, 
     DataProcessor, Trainer, ModelUploader
 )
