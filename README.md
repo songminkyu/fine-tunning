@@ -1,7 +1,3 @@
-# CLAUDE.md
-
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
 ## Project Overview
 
 This is a Korean language fine-tuning project for GPT-OSS 20B model using Unsloth framework. The project focuses on educational content generation in Korean using LoRA (Low-Rank Adaptation) techniques for efficient training.
