@@ -94,7 +94,7 @@ The upload system creates production-ready model repositories with:
 The project has been refactored into a modular architecture for better maintainability:
 
 ```
-fine_tuner/
+core/
 ├── __init__.py
 ├── config/
 │   ├── __init__.py
