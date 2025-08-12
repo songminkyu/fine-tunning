@@ -7,10 +7,10 @@ requires-python = ">=3.12"
 dependencies = [
     "requests>=2.32.4",
     "transformers>=4.36.0",
-    "torch>=2.0.0",
+    "torch>=2.7.1",
     "unsloth>=2025.8.4",
     "trl>=0.21.0",
-    "datasets>=4.0.0",
+    "datasets>=3.4.1",
     "huggingface-hub>=0.34.4",
-    "peft>=0.17.0"
+    "peft>=0.17.0",
 ]
