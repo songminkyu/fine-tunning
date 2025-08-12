@@ -5,9 +5,9 @@ This is a Korean language fine-tuning project for GPT-OSS 20B model using Unslot
 ## Development Setup
 
 ### Required Dependencies
-The project requires the following Python packages (install via pip):
+The project requires the following Python packages (install via uv):
 ```bash
-pip install transformers torch unsloth trl datasets huggingface-hub peft
+uv add transformers torch unsloth trl datasets huggingface-hub peft
 ```
 
 ### Core Libraries Used
@@ -132,7 +132,7 @@ requirements.txt           # Dependencies
 
 ```bash
 # Install dependencies
-pip install -r requirements.txt
+uv sync
 
 # Run full pipeline
 python main.py
