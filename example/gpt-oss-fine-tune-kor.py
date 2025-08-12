@@ -60,8 +60,6 @@ pass
 
 from datasets import load_dataset
 dataset = load_dataset("maywell/korean_textbooks", name="claude_evol", split="train")
-dataset
-
 
 def formatting_prompts_func(examples):
     # 이미 완성된 텍스트이므로 그대로 반환
@@ -76,7 +74,7 @@ print(dataset[0]['text'])
 from trl import SFTConfig, SFTTrainer
 trainer = SFTTrainer(
     model = model,
-    tokenizer = tokenizer,
+    processing_class = tokenizer,
     train_dataset = dataset,
     args = SFTConfig(
         per_device_train_batch_size = 1,
