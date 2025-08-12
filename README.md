@@ -5,6 +5,11 @@ This is a Korean language fine-tuning project for GPT-OSS 20B model using Unslot
 ## Development Setup
 
 ### Required Dependencies
+
+#### For Windows Users
+Please follow the [Windows Installation Guide](https://docs.unsloth.ai/get-started/installing-+-updating/windows-installation) for proper Unsloth setup on Windows systems.
+
+#### General Installation
 The project requires the following Python packages (install via uv):
 ```bash
 uv add transformers torch unsloth trl datasets huggingface-hub peft

@@ -7,10 +7,51 @@ requires-python = ">=3.12"
 dependencies = [
     "requests>=2.32.4",
     "transformers>=4.36.0",
-    "torch>=2.7.1",
     "unsloth>=2025.8.4",
     "trl>=0.21.0",
     "datasets>=3.4.1",
     "huggingface-hub>=0.34.4",
     "peft>=0.17.0",
+    "torch==2.7.1",
+    "torchvision==0.22.1",
+    "torchaudio==2.7.1",
+    #if window
+    #"triton-windows>=3.4.0.post20"
 ]
+
+# Specific versions of torch, torchvision, and torchaudio are installed based on the extra feature
+[project.optional-dependencies]
+cpu = ["torch==2.7.1", "torchvision==0.22.1", "torchaudio==2.7.1"]
+cu124 = ["torch==2.7.1", "torchvision==0.22.1", "torchaudio==2.7.1"]
+
+# The cpu and cu128 extras are mutually exclusive, you can't use both at the same time
+[tool.uv]
+conflicts = [[{ extra = "cpu" }, { extra = "cu128" }]]
+
+
+[tool.uv.sources]
+# The torch, torchvision, and torchaudio packages are installed from the pytorch-cpu and pytorch-cu124 indexes
+torch = [
+  { index = "pytorch-cpu", extra = "cpu" },
+  { index = "pytorch-cu128", extra = "cu128" },
+]
+torchvision = [
+  { index = "pytorch-cpu", extra = "cpu" },
+  { index = "pytorch-cu128", extra = "cu128" },
+]
+torchaudio = [
+  { index = "pytorch-cpu", extra = "cpu" },
+  { index = "pytorch-cu128", extra = "cu128" },
+]
+
+
+[[tool.uv.index]]
+# The pytorch-cpu index is used to install the torch, torchvision, and torchaudio packages
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
