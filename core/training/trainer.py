@@ -71,7 +71,7 @@ class Trainer:
             
             trainer = SFTTrainer(
                 model=self.model,
-                tokenizer=self.tokenizer,
+                processing_class=self.tokenizer,
                 train_dataset=train_dataset,
                 args=sft_config,
             )
