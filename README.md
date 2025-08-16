@@ -154,3 +154,7 @@ All original functionality has been preserved:
 The output directory structure includes:
 - `outputs/`: Training checkpoints and logs
 - `korean_textbook_model/`: Final fine-tuned model artifacts
+
+
+###Issue fix
+https://github.com/unslothai/unsloth-zoo/pull/234#issuecomment-3182335661
